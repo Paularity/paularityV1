@@ -19,21 +19,21 @@ const data: PortfolioData = {
   about: `A highly skilled and adaptable Front-End Developer with extensive experience in enterprise systems and responsive web applications. Adept at building scalable interfaces with modern frameworks (Blazor, Angular) and leading frontend teams through agile sprints, component architecture planning, and CI/CD deployments. Passionate about optimizing user experience and code reusability while aligning with business goals.`,
 
   experience: [
-    {
-      title: "CGC (Core Group Company) – US",
-      position: "Software Engineer",
-      type: "Freelance Contractor",
-      period: "Aug 2024 – Present",
-      location: "Remote",
-      projects: [
-        {
-          name: "Eaton Corp. – Internal Web Application Projects",
-          role: "Integrations & Migrations",
-          description:
-            "Worked on enterprise-level internal tools for Eaton, modernizing legacy systems and integrating web-based enterprise services.",
-        },
-      ],
-    },
+    // {
+    //   title: "CGC (Core Group Company) – US",
+    //   position: "Software Engineer",
+    //   type: "Freelance Contractor",
+    //   period: "Aug 2024 – Present",
+    //   location: "Remote",
+    //   projects: [
+    //     {
+    //       name: "Eaton Corp. – Internal Web Application Projects",
+    //       role: "Integrations & Migrations",
+    //       description:
+    //         "Worked on enterprise-level internal tools for Eaton, modernizing legacy systems and integrating web-based enterprise services.",
+    //     },
+    //   ],
+    // },
     {
       title: "Blackfort PH",
       position: "Software Developer – IT Consultant",
