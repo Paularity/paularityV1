@@ -1,5 +1,6 @@
 import { JSX } from "react";
 import data from "./data";
+import myResume from "./assets/Christian-Paul-Decembrana-2025.pdf";
 
 export default function App(): JSX.Element {
   return (
@@ -53,12 +54,21 @@ export default function App(): JSX.Element {
               Christian Paul Decembrana
             </h1>
             <p className="lead">Frontend Developer & IT Consultant</p>
-            <a
-              href="#experience"
-              className="btn btn-outline-light btn-lg mt-4 glow-button"
-            >
-              Explore My Work
-            </a>
+            <div className="d-flex justify-content-center flex-wrap">
+              <a
+                href="#experience"
+                className="btn btn-outline-light btn-lg mt-4 glow-button me-2"
+              >
+                Explore My Work
+              </a>
+              <a
+                href={myResume}
+                className="btn btn-light btn-lg mt-4 glow-button"
+                download
+              >
+                Download CV
+              </a>
+            </div>
           </div>
         </div>
       </header>
