@@ -145,7 +145,6 @@ export default function App(): JSX.Element {
           ))}
         </div>
       </section>
-
       <footer className="text-center p-4 bg-dark text-white fade-in">
         <p>
           &copy; 2025 Christian Paul Decembrana | Angeles City, PH |{" "}
@@ -153,7 +152,16 @@ export default function App(): JSX.Element {
             className="text-white"
             href="mailto:work.christiandecembrana@gmail.com"
           >
-            Email Me
+            Contact Me
+          </a>{" "}
+          |{" "}
+          <a
+            className="text-white"
+            href="https://linkedin.com/in/paularity"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            LinkedIn
           </a>
         </p>
       </footer>
