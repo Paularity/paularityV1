@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom";
 import data from "../data";
 
 export default function Experience() {
+  const navigate = useNavigate();
+
   return (
     <section id="experience" className="section container">
       <h2 className="mb-5 section-title">Work Experience</h2>
@@ -14,10 +17,15 @@ export default function Experience() {
                 {item.type} | {item.period} | {item.location}
               </p>
             </div>
+
             {item.projects && (
               <div className="tile-body">
                 {item.projects.map((project, pidx) => (
-                  <div key={pidx} className="project-block">
+                  <div
+                    key={pidx}
+                    className="project-block hover-lift"
+                    onClick={() => navigate(`/projects/${project.id}`)}
+                  >
                     <div className="project-name">{project.name}</div>
                     <div className="project-role">{project.role}</div>
                     <p className="project-description">{project.description}</p>
@@ -25,6 +33,7 @@ export default function Experience() {
                 ))}
               </div>
             )}
+
             {item.responsibilities && (
               <ul className="tile-responsibilities">
                 {item.responsibilities.map((r, ridx) => (

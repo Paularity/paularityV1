@@ -11,7 +11,7 @@ interface ExperienceItem {
   type: string;
   period: string;
   location: string;
-  projects?: { name: string; role: string; description: string }[];
+  projects?: { id: string; name: string; role: string; description: string }[];
   responsibilities?: string[];
 }
 
@@ -42,24 +42,28 @@ const data: PortfolioData = {
       location: "Remote",
       projects: [
         {
+          id: "0001",
           name: "Blackfort HRIS (Feb 2025 – Present)",
           role: "Senior Frontend Developer / Tech Lead",
           description:
             "An internal HR system like Sprout PH, managing records, attendance, and leave modules.",
         },
         {
+          id: "0002",
           name: "DPWH – EDMS (May 2024 – Mar 2025)",
           role: "Senior Frontend Developer",
           description:
             "Electronic Document Management System for DPWH, focusing on file handling, PDF viewer integrations, metadata tagging, and role-based access.",
         },
         {
+          id: "0003",
           name: "DPWH – Ngobia (Jun 2023 – Jan 2024)",
           role: "Senior Frontend Developer",
           description:
             "Asset maintenance platform for DPWH to track road and bridge infrastructure status and repair planning.",
         },
         {
+          id: "0004",
           name: "PSACC (Aug 2022 – Nov 2024)",
           role: "Senior Frontend Developer",
           description:
@@ -77,6 +81,20 @@ const data: PortfolioData = {
         "Built Angular 9+ SPA for maintenance and shutdown planning.",
         "Implemented login, gantt charts, dashboards using Chart.js, and Excel-like tables.",
         "Handled CI/CD with Azure DevOps and Git version control.",
+      ],
+      projects: [
+        {
+          id: "0005",
+          name: "Shutdown Management System - Web Angular App",
+          role: "Frontend Developer",
+          description: "Todo Description",
+        },
+        {
+          id: "0006",
+          name: "Shutdown Management System - Mobile Flutter App",
+          role: "Frontend Developer",
+          description: "Todo Description",
+        },
       ],
     },
     {
