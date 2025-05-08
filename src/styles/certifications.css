@@ -1,0 +1,36 @@
+.certification-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.certification-card {
+  background: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #d1d5db;
+  padding: 1.5rem;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.certification-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cert-icon {
+  font-size: 1.8rem;
+}
+
+.cert-title {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #374151;
+  line-height: 1.4;
+}
