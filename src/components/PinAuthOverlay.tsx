@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-const CORRECT_PIN = "344795";
+const CORRECT_PIN = "120697";
 const MAX_ATTEMPTS = 3;
 const TIMEOUT_SECONDS = 30;
 
