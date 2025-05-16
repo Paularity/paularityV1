@@ -23,7 +23,7 @@ export default function Experience() {
                 {item.projects.map((project, pidx) => (
                   <div
                     key={pidx}
-                    className="project-block hover-lift"
+                    className="project-block"
                     onClick={() => navigate(`/projects/${project.id}`)}
                   >
                     <div className="project-name">{project.name}</div>

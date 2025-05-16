@@ -11,6 +11,7 @@
   border: 1px solid #d1d5db;
   transition: box-shadow 0.3s ease;
 }
+
 .experience-tile:hover {
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
 }
@@ -40,8 +41,44 @@
 .tile-body .project-block {
   margin-bottom: 1.25rem;
   padding-left: 1rem;
-  border-left: 3px solid #94a3b8;
+  border-left: 3px solid #1e72e9;
   cursor: pointer;
+  padding: 5px 15px;
+  position: relative;
+}
+
+.tile-body .project-block:hover {
+  color: #fefefe !important;
+  background-image: linear-gradient(
+    to right,
+    #ffffff,
+    #e8edf3,
+    #63aaec,
+    #306cdb
+  );
+  box-shadow: 0 4px 15px 0 rgba(87, 154, 236, 0.75);
+  background-position: 100% 0;
+  moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+}
+
+.tile-body .project-block::after {
+  content: "→";
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateX(-10px) translateY(-50%);
+  opacity: 0;
+  transition: transform 0.4s ease-in-out, opacity 0.4s ease-in-out;
+  font-size: 1.2rem;
+  color: #fefefe;
+}
+
+.tile-body .project-block:hover::after {
+  transform: translateX(0) translateY(-50%);
+  opacity: 1;
 }
 
 .project-name {

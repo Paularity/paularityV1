@@ -1,0 +1,266 @@
+/* ───────── Reset ───────── */
+.bf-body * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ───────── Layout & Base ───────── */
+.bf-body {
+  font-family: "Inter", "Helvetica Neue", sans-serif;
+  overflow: hidden;
+  background-color: #050505;
+  color: white;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bf-body .content-container {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  max-width: 80vw;
+  padding: 2rem;
+}
+
+.bf-body h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(to right, #fff, #acacac);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+}
+
+.bf-body p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.bf-body .btn {
+  background: linear-gradient(90deg, #ff7920, #b94a00);
+  color: white;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 4px 20px rgba(255, 58, 130, 0.3);
+}
+
+.bf-body .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 25px rgba(255, 58, 130, 0.4);
+}
+
+/* ───────── Decorative Background ───────── */
+.bf-body .gradient-background {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.bf-body .gradient-sphere {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(60px);
+}
+
+.bf-body .sphere-1 {
+  width: 40vw;
+  height: 40vw;
+  background: linear-gradient(
+    40deg,
+    rgba(255, 145, 0, 0.8),
+    rgba(255, 102, 0, 0.4)
+  );
+  top: -10%;
+  left: -10%;
+  animation: float-1 15s ease-in-out infinite alternate;
+}
+
+.bf-body .sphere-2 {
+  width: 45vw;
+  height: 45vw;
+  background: linear-gradient(
+    240deg,
+    rgba(255, 19, 19, 0.8),
+    rgba(255, 60, 0, 0.4)
+  );
+  bottom: -20%;
+  right: -10%;
+  animation: float-2 18s ease-in-out infinite alternate;
+}
+
+.bf-body .sphere-3 {
+  width: 30vw;
+  height: 30vw;
+  background: linear-gradient(
+    120deg,
+    rgba(133, 89, 255, 0.5),
+    rgba(98, 216, 249, 0.3)
+  );
+  top: 60%;
+  left: 20%;
+  animation: float-3 20s ease-in-out infinite alternate;
+}
+
+@keyframes float-1 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(10%, 10%) scale(1.1);
+  }
+}
+@keyframes float-2 {
+  from {
+    transform: translate(0, 0) scale(1);
+  }
+  to {
+    transform: translate(-10%, -5%) scale(1.15);
+  }
+}
+@keyframes float-3 {
+  from {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.3;
+  }
+  to {
+    transform: translate(-5%, 10%) scale(1.05);
+    opacity: 0.6;
+  }
+}
+
+.bf-body .grid-overlay {
+  position: absolute;
+  inset: 0;
+  background-size: 40px 40px;
+  background-image: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  z-index: 2;
+}
+
+.bf-body .glow {
+  position: absolute;
+  width: 40vw;
+  height: 40vh;
+  background: radial-gradient(circle, rgba(72, 0, 255, 0.15), transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  filter: blur(30px);
+  animation: pulse 8s infinite alternate;
+}
+
+@keyframes pulse {
+  from {
+    opacity: 0.3;
+    transform: translate(-50%, -50%) scale(0.9);
+  }
+  to {
+    opacity: 0.7;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+}
+
+.bf-body .noise-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 0.05;
+  z-index: 5;
+}
+
+/* ───────── Slider ───────── */
+.bf-body .bf-slider-container {
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.bf-body .bf-slider-block {
+  position: relative; /* added for label positioning */
+  flex: 1 1 0;
+  overflow: hidden;
+  transition: flex 0.4s ease, filter 0.4s ease;
+}
+
+.bf-body .bf-slider-block img {
+  width: 100%;
+  height: 580px;
+  object-fit: cover;
+  cursor: zoom-in;
+  display: block;
+  filter: blur(4px);
+}
+
+.bf-body .bf-slider-container:hover .bf-slider-block:not(:hover) img {
+  filter: blur(4px);
+  opacity: 0.7;
+}
+
+.bf-body .bf-slider-block:hover {
+  flex: 3 1 0;
+}
+
+.bf-body .bf-slider-block:hover img {
+  filter: none;
+  opacity: 1;
+}
+
+/* third slide expanded & unblurred by default */
+.bf-body .bf-slider-block:nth-child(3) {
+  flex: 3 1 0;
+}
+.bf-body .bf-slider-block:nth-child(3) img {
+  filter: none;
+  opacity: 1;
+}
+
+/* ───────── Hover Label ───────── */
+.bf-body .hover-label {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translate(-50%, 10px);
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  padding: 0.4rem 0.8rem;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease-out, transform 0.3s ease-out;
+}
+
+.bf-body .bf-slider-block:hover .hover-label {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+/* optional bounce animation */
+/*
+@keyframes label-bounce {
+  0%   { transform: translate(-50%, 15px);   opacity: 0; }
+  60%  { transform: translate(-50%, -4px);   opacity: 1; }
+  100% { transform: translate(-50%, 0);      opacity: 1; }
+}
+.bf-body .bf-slider-block:hover .hover-label {
+  animation: label-bounce 0.4s ease-out forwards;
+}
+*/
